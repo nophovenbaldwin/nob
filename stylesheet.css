@@ -1,22 +1,69 @@
-body, html{
-    height: 100vh;
+body {
+		height: 100vh;
     background-size:cover;
+		margin: 0;
+		font-family: Helvetica, sans-serif;
+}
 
+.wrapper {
+	display: flex;
+	justify-content: center;
+	text-shadow: 1px 1px 2px black, 0 0 1px blue, 0 0 1px darkblue;
+}
 
+#mydiv {
+	padding: 10px;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	max-width: 500px;
+	height: 600px;
+	text-align: center;
+	cursor: move;
+	background-size: cover;
+}
 
-  }
+.logo {
+	margin: -10px 0;
+	height: 100px;
+}
 
-  body {
+.nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 15px;
+}
 
-    margin: 0;
+.wrapper--image {
+	-webkit-clip-path: polygon(10% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	height: 400px;
+	width: 400px;
+	background: url('images/selfie.jpg');
+	background-position: 25% 180%;
+	margin: 40% auto;
+}
 
-  }
+.footer {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-top: 10px;
+	text-align: center;
+	color: darkblue;
+}
+
 a:link {
-  font-size: 42px; text-align: center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	font-size: 42px; text-align: center; 
+	text-shadow: 1px 1px 2px black, 0 0 2px blue, 0 0 1px darkblue, 1px 1px 10px darkgreen;
   text-decoration: none;
 }
 a:hover {
-  color:black; font-size: 42px; text-align: center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	color:black; font-size: 42px; 
+	text-align: center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   text-decoration: none;
 }
 
@@ -75,22 +122,17 @@ a:hover {
 
 }
 
-#mydiv {
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    min-width: 40%;
-    text-align: center;
-    border: 5px solid black;
-
-
-
+@media (max-width: 450px) {
+	#mydiv {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 10% 0;
+		width: 100%;
+		border: none;
+		box-shadow: none;
+	}
 }
 
-#mydivheader {
-    padding: 10px;
-    cursor: move;
-    z-index: 10;
-    display: block;
 
-}
