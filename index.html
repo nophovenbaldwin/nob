@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-			    <title>nob</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<title>nob</title>
 
-			    <script>
-			    $(document).ready(function(){
-    var classCycle=['imageCycle1','imageCycle2','imageCycle3','imageCycle4'];
+	<script>
+		$(document).ready(function () {
+			var classCycle = ['imageCycle1', 'imageCycle2', 'imageCycle3', 'imageCycle4'];
 
-    var randomNumber = Math.floor(Math.random() * classCycle.length);
-    var classToAdd = classCycle[randomNumber];
+			var randomNumber = Math.floor(Math.random() * classCycle.length);
+			var classToAdd = classCycle[randomNumber];
 
-    $('body').addClass(classToAdd);
+			$('body').addClass(classToAdd);
 
-});
+		});
 
-$('.myIframe').css('height', $(window).height()+'px');
-</script>
-	</head>
+		$('.myIframe').css('height', $(window).height() + 'px');
+	</script>
+</head>
 
-	<body style="border: 5px solid black; ">
+<body style="border: 5px solid black; ">
 
-		<div id="mydiv" style="box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">
-			<div id="mydivheader"><img id="nob" src="images/nob3.png" height="100px" >
-
-
-
-			</div>
-<iframe class="about" src="about.html" width="200" height="200" scrolling="yes"></iframe>
-
-</div>
-<script>
-$(function(){
-  $("#nob").on({
-   mouseenter: function(){
-    $(this).attr('src','images/nob5.png');
-  },
-  mouseleave: function(){
-    $(this).attr('src','images/nob3.png');
-  }
-  });
-
-});
-</script>
-<script src="move.js"></script>
+	<div id="mydiv" style="box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">
+		<div id="mydivheader">
+			<img id="nob" src="images/nob3.png" height="100px">
 
 
 
-	</body>
+		</div>
+		<iframe class="about" src="about.html" width="200" height="200" scrolling="yes"></iframe>
+
+	</div>
+	<script>
+		$(function () {
+			$("#nob").on({
+				mouseenter: function () {
+					$(this).attr('src', 'images/nob5.png');
+				},
+				mouseleave: function () {
+					$(this).attr('src', 'images/nob3.png');
+				}
+			});
+
+		});
+	</script>
+	<script src="move.js"></script>
+
+
+
+</body>
+
 </html>

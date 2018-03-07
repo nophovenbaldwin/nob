@@ -1,0 +1,20 @@
+{
+	"name": "nob",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"start": "run-script-os",
+		"start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser",
+		"start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser"
+	},
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"browser-sync": "^2.18.13",
+		"run-script-os": "^1.0.2"
+	},
+	"dependencies": {
+		"hark": "^1.1.6"
+	}
+}
