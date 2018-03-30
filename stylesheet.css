@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Chicle|Faster+One|Monoton');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
-		height: 100vh;
-    background-size:cover;
-		margin: 0;
-		font-family: "Times New Roman", Courier, monospace;
-		cursor: pointer;
+	height: 100vh;
+	background-size:cover;
+	margin: 0;
+	font-family: 'Chicle', cursive;
+	cursor: pointer;
 }
 
 .wrapper {
@@ -12,30 +18,42 @@ body {
 	text-shadow: 1px 1px 2px black, 0 0 1px blue, 0 0 1px darkblue;
 }
 
-#mydiv {
-	padding: 10px;
-	position: absolute;
-	top: 10%;
-	left: 0;
-	right: 0;
-	max-width: 500px;
-	height: 400px;
-	text-align: center;
-	cursor: move;
-	background-size: cover;
-}
-
 .logo {
 	max-height: 100px;
   max-width: 100px;
 }
-
 
 .nav {
 	margin: 20px 15px;
 	font-size: 30px;
 }
 
+/*** index ****/
+
+.nav--index {
+	display: flex;
+	flex-direction: column;
+	height: 95%;
+	justify-content: space-between;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom {
+	display: flex;
+	justify-content: center;
+}
+
+.bottom > * {
+	margin: 20px;
+}
+
+.little-fish {
+	display: none;
+}
 
 .wrapper--image {
 	height: 400px;
@@ -83,15 +101,11 @@ a:visited {
     background:url(images/fish.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size:;
-
 }
 
 .imageCycle3{
     background:url(images/glass.jpg);
     background-position: center;
-
-
 }
 
 .imageCycle4{
@@ -102,20 +116,56 @@ a:visited {
 
 }
 
-
-
-
 .about {
   resize: both;
   border: none;
   display: block;
   width: 100%;
   height: 360px;
-
 }
 
 .about2 {
 
+}
+
+/*** bandz ****/
+.little-squiggly-face {
+	text-align: right;
+	margin-right: 10%;
+	color: white;
+}
+
+ul.bandslist > li {
+	margin: 6px;
+	list-style: none;
+}
+
+ul.bandslist > ul > li {
+	list-style: none;
+}
+
+ul.bandslist > ul > li:before {
+	list-style: none; 
+	content: '✩';
+	font-size: 10px;
+	margin: 0 2px;
+}
+
+ul.bandslist > ul > li.description:before {
+	content: none;
+	list-style: none;
+}
+
+.bandname {
+	font-family: 'Faster One', cursive;
+	font-size: 26px;
+}
+
+
+ul.bandslist > li.poolparty {
+	font-family: 'Monoton', cursive;
+	font-size: 22px;
+	margin-bottom: 0px;
 }
 
 @media (max-width: 450px) {
@@ -132,5 +182,21 @@ a:visited {
 
   .nav {
     flex-direction: column;
-  }
+	}
+	
+	.index-background {
+		background: none;
+	}
+
+	.little-fish {
+		display: block;
+		position: fixed;
+		top: 46%;
+		left: 46%;
+	}
+
+	/*** bandz ****/
+	.little-squiggly-face {
+		color: black;
+	}
 }
