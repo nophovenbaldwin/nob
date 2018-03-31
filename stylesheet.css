@@ -168,6 +168,11 @@ ul.bandslist > li.poolparty {
 	margin-bottom: 0px;
 }
 
+/***** cal ******/
+.past {
+	color: grey;
+}
+
 @media (max-width: 450px) {
 	#mydiv {
 		top: 0;
