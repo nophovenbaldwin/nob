@@ -31,6 +31,17 @@ body {
 
 /*** index ****/
 
+.cal-description.index-description {
+	text-transform: uppercase;
+	width: auto;
+	padding: 8px;
+	transform: translateX(150px) translateY(40px);
+}
+
+.cal-description.index-description.on {
+	transform: translateX(10px) translateY(40px);
+}
+
 .nav--index {
 	display: flex;
 	flex-direction: column;
@@ -113,8 +124,6 @@ a:visited {
     background:url(images/swish.jpg);
     background-position: center;
     background-size: 200px;
-
-
 }
 
 .about {
@@ -123,10 +132,6 @@ a:visited {
   display: block;
   width: 100%;
   height: 360px;
-}
-
-.about2 {
-
 }
 
 /*** bandz ****/
@@ -182,13 +187,14 @@ ul.bandslist > li.poolparty {
 	background: rgb(170, 170, 170);
 	color: white;
 	text-shadow: 2px 2px 5px black;
-	width: 170px;
 	padding: 0px 8px;
+	width: 170px;
 	text-align: center;
 	font-weight: 200;
 	text-transform: lowercase;
 	opacity: 0;
-	transform: translateX(10px);
+	transform: translateX(150px);
+	transition: all .2s;
 }
 
 .container--cal > ul > li {
@@ -197,14 +203,20 @@ ul.bandslist > li.poolparty {
 	font-weight: 500;
 }
 
-
-.on {
+.cal-description.on {
+	transform: translateX(10px);
 	opacity: 1;
 }
 
-.past {
-	color: grey;
+.container--cal > ul > li.past {
+	color: rgba(0,0,0,.6);
 	text-decoration: line-through;
+	font-size: 8px;
+	transition: all .2s;
+}
+
+.container--cal > ul > li.past.fourteen {
+	font-size: 14px;
 }
 
 @media (max-width: 450px) {

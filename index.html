@@ -6,16 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 	<title>nob</title>
-
 </head>
 
 <body class="index-background">
-
 	<div class="nav nav--index">
 		<div class="top">
-			<a href="index.html">𝔑𝔒𝔅</a>
+			<a href="index.html" class="nob">𝔑𝔒𝔅</a>
+			<div class="cal-description index-description">
+				Noah Ophoven-Baldwin
+				<br/> n.ophoven.baldwin@gmail.com
+			</div>
 			<a href="bandz.html">𝔅𝔄𝔑𝔇𝔖</a>
 		</div>
 		<div class="bottom">
@@ -30,9 +31,21 @@
 	</div>
 	<div class="footer"> mitch'n'trev 2018</div>
 
+	<script>
 
-	<script src="move.js"></script>
-	<script src="script.js"></script>
+		const nob = document.querySelector('.nob');
+		const indexDescription = document.querySelector('.index-description');
+
+		nob.addEventListener('mouseover', () => {
+			indexDescription.classList.add('on')
+		})
+
+		nob.addEventListener('mouseleave', () => {
+			indexDescription.classList.remove('on')
+		})
+
+
+	</script>
 
 </body>
 
