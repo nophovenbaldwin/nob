@@ -14,8 +14,9 @@
 		<div class="top">
 			<a href="index.html" class="nob">𝔑𝔒𝔅</a>
 			<div class="cal-description index-description">
-				Noah Ophoven-Baldwin
-				<br/> n.ophoven.baldwin@gmail.com
+				NOAH OPHOVEN-BALDWIN
+				<br/>N.OPHOVENBALDWIN@GMAIL.COM
+				<br /> o-|||&lt;O
 			</div>
 			<a href="bandz.html">𝔅𝔄𝔑𝔇𝔖</a>
 		</div>
@@ -36,6 +37,8 @@
 		const nob = document.querySelector('.nob');
 		const indexDescription = document.querySelector('.index-description');
 
+		fixHeightForIphoneScreen(document.querySelector('.nav--index'))
+
 		nob.addEventListener('mouseover', () => {
 			indexDescription.classList.add('on')
 		})
@@ -44,6 +47,17 @@
 			indexDescription.classList.remove('on')
 		})
 
+
+		// ugh iphones
+		function fixHeightForIphoneScreen(node) {
+			const ua = window.navigator.userAgent;
+			const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+			const webkit = !!ua.match(/WebKit/i);
+			const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+			if (iOSSafari) {
+				node.style.height = '85vh';
+			}
+		}
 
 	</script>
 

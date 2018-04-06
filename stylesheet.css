@@ -25,14 +25,14 @@ body {
 }
 
 .nav {
-	margin: 20px 15px;
+	margin: 20px 15px 0;
 	font-size: 30px;
 }
 
 /*** index ****/
 
 .cal-description.index-description {
-	text-transform: uppercase;
+	text-transform: none;
 	width: auto;
 	padding: 8px;
 	transform: translateX(150px) translateY(40px);
@@ -45,7 +45,7 @@ body {
 .nav--index {
 	display: flex;
 	flex-direction: column;
-	height: 95%;
+	height: 94vh;
 	justify-content: space-between;
 }
 
@@ -76,13 +76,11 @@ body {
 }
 
 .footer {
-	position: absolute;
 	font-size: 10px;
 	bottom: 5px;
 	left: 0;
 	right: 0;
 	text-align: center;
-	margin-top: 10px;
 	text-align: center;
 	color: grey;
 }
@@ -135,14 +133,25 @@ a:visited {
 }
 
 /*** bandz ****/
+
+.nav.bandz {
+	margin-bottom: 0px;
+}
+
 .little-squiggly-face {
 	text-align: right;
+	margin: 0;
+	padding: 0;
 	margin-right: 10%;
 	color: white;
 }
 
+ul.bandslist {
+	padding: 0 20px;
+}
+
 ul.bandslist > li {
-	margin: 6px;
+	margin: 0 6px;
 	list-style: none;
 }
 
@@ -167,11 +176,14 @@ ul.bandslist > ul > li.description:before {
 	font-size: 26px;
 }
 
-
 ul.bandslist > li.poolparty {
 	font-family: 'Monoton', cursive;
 	font-size: 22px;
 	margin-bottom: 0px;
+}
+
+ul.bandslist > li.poolparty > a:hover {
+	color: #f2f2f2;
 }
 
 /***** cal ******/
@@ -193,7 +205,7 @@ ul.bandslist > li.poolparty {
 	font-weight: 200;
 	text-transform: lowercase;
 	opacity: 0;
-	transform: translateX(150px);
+	transform: translateX(250px);
 	transition: all .2s;
 }
 
@@ -204,7 +216,7 @@ ul.bandslist > li.poolparty {
 }
 
 .cal-description.on {
-	transform: translateX(10px);
+	transform: translateX(100px);
 	opacity: 1;
 }
 
@@ -219,7 +231,7 @@ ul.bandslist > li.poolparty {
 	font-size: 14px;
 }
 
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
 	#mydiv {
 		top: 0;
 		left: 0;
