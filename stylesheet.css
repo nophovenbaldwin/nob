@@ -91,6 +91,7 @@ a:link {
 }
 
 a:hover {
+	cursor: pointer;
 	color: #f2f2f2;
   text-decoration: none;
 }
@@ -103,9 +104,9 @@ a:visited {
 .imageCycle1{
     background:url(images/fridge.jpg);
     background-position: center;
-    background-size: 50px;
-
-
+		background-size: 50px;
+		
+		
 }
 .index-background{
     background:url(images/fish.jpg);
