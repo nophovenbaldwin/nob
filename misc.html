@@ -14,40 +14,38 @@
 		<a href="/">𝔐ℑ𝔖ℭ</a <br>
 	</div>
 
-	<div class="misc-links">
-		<a href="https://www.youtube.com/watch?v=PyKQ2itSet4">
-			<p>carp smash</p>
-		</a>
-		<a href="https://www.youtube.com/watch?v=ZrTql0qWgEI">
-			<p>chrysalis</p>
-		</a>
-		<a href="http://www.dancebums.com/wow/">
-			<p>wow</p>
-		</a>
-		<a href="https://soundcloud.com/adam-zahller/piss-lasso-prelude-mvt-1-kyrie-eleison-mvt-2-las-golosas-glosolalias-de-las-microgonadas">
-			<p>piss lasso</p>
-		</a>
-		<a href="https://www.youtube.com/watch?v=8uFoHp3jR1M">
-			<p>nunc dimittis</p>
-		</a>
-		<a href="https://sixfamilies.bandcamp.com/releases">
-			<p>field rec</p>
-		</a>
-		<a href="https://straya.bandcamp.com/album/sobereyed">
-			<p>sobereyed</p>
-		</a>
-		<a href="https://www.discogs.com/Le-Percheron-Le-Percheron/release/10418753">
-			<p>le percheron</p>
-		</a>
-		<a href="https://drone-not-drones.bandcamp.com/track/synthet">
-			<p>fuck bombs</p>
-		</a>
-	</div>
+	<a class="misc-link" href="https://www.youtube.com/watch?v=PyKQ2itSet4">
+		<p>carp smash</p>
+	</a>
+	<a class="misc-link" href="https://www.youtube.com/watch?v=ZrTql0qWgEI">
+		<p>chrysalis</p>
+	</a>
+	<a class="misc-link" href="http://www.dancebums.com/wow/">
+		<p>wow</p>
+	</a>
+	<a class="misc-link" href="https://soundcloud.com/adam-zahller/piss-lasso-prelude-mvt-1-kyrie-eleison-mvt-2-las-golosas-glosolalias-de-las-microgonadas">
+		<p>piss lasso</p>
+	</a>
+	<a class="misc-link" href="https://www.youtube.com/watch?v=8uFoHp3jR1M">
+		<p>nunc dimittis</p>
+	</a>
+	<a class="misc-link" href="https://sixfamilies.bandcamp.com/releases">
+		<p>field rec</p>
+	</a>
+	<a class="misc-link" href="https://straya.bandcamp.com/album/sobereyed">
+		<p>sobereyed</p>
+	</a>
+	<a class="misc-link" href="https://www.discogs.com/Le-Percheron-Le-Percheron/release/10418753">
+		<p>le percheron</p>
+	</a>
+	<a class="misc-link" href="https://drone-not-drones.bandcamp.com/track/synthet">
+		<p>fuck bombs</p>
+	</a>
 
 
 	<script>
 
-		const links = document.querySelector('.misc-links').querySelectorAll('a');
+		const links = document.querySelectorAll('.misc-link');
 
 		links.forEach(link => {
 			link.style.position = 'fixed';
@@ -67,7 +65,7 @@
 				const currentTop = Number(window.getComputedStyle(node)['margin-top'].split('px')[0]);
 				const currentLeft = Number(window.getComputedStyle(node)['margin-left'].split('px')[0]);
 
-				if (currentTop >= window.innerHeight - node.height) {
+				if (currentTop >= window.innerHeight - node.height * 2) {
 					node.topDirection = false;
 				}
 
@@ -104,8 +102,8 @@
 		}
 
 		function setSpeed(node) {
-			node.xSpeed = Math.random();
-			node.ySpeed = Math.random();
+			node.xSpeed = Math.random() * .8 + .2;
+			node.ySpeed = Math.random() * .8 + .2;
 		}
 
 		function setNodeDimensions(node) {
