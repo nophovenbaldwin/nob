@@ -242,14 +242,13 @@ ul.bandslist > li.poolparty > a:hover {
 }
 
 /******* LINKS ********/
-.misc-links {
-	margin: 18px;
+.misc-link {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 14px;
 	font-weight: 500;
 	text-decoration: underline;
 }
 
-.misc-links > *:hover {
+.misc-link > *:hover {
 	font-style: italic;
 }
