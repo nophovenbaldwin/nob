@@ -2,65 +2,64 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="𝙩𝙝𝙚 noah ob, hello" content="noah ob AKA noah ophoven-baldwin, lovingly making sounds for 𝙩𝙝𝙚𝙚">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<title>𝔑𝔒𝔅</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="𝙩𝙝𝙚 noah ob, hello" content="noah ob AKA noah ophoven-baldwin, lovingly making sounds for 𝙩𝙝𝙚𝙚">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>𝔑𝔒𝔅</title>
 </head>
 
 <body class="index-background">
-	<div class="nav nav--index">
-		<div class="top">
-			<a href="#" class="nob">𝔑𝔒𝔅</a>
-			<div class="cal-description index-description">
-				NOAH OPHOVEN-BALDWIN
-				<br/>N.OPHOVENBALDWIN@GMAIL.COM
-				<br /> o-|||&lt;O
-			</div>
-			<a href="bandz.html">𝔅𝔄𝔑𝔇𝔖</a>
-		</div>
-		<div class="bottom">
-			<a href="cal.html">ℭ𝔄𝔏𝔈𝔑𝔇𝔄ℜ</a>
-			<a href="misc.html">𝔐ℑ𝔖ℭ</a>
-		</div>
-	</div>
+  <div class="nav nav--index">
+    <div class="top">
+      <a href="#" class="nob">𝔑𝔒𝔅</a>
+      <div class="cal-description index-description">
+        NOAH OPHOVEN-BALDWIN
+        <br />N.OPHOVENBALDWIN@GMAIL.COM
+        <br /> o-|||&lt;O
+      </div>
+      <a href="bandz.html">𝔅𝔄𝔑𝔇𝔖</a>
+    </div>
+    <div class="bottom">
+      <a href="cal.html">ℭ𝔄𝔏𝔈𝔑𝔇𝔄ℜ</a>
+      <a href="misc.html">𝔐ℑ𝔖ℭ</a>
+    </div>
+  </div>
 
-	<div class="little-fish">
-		<p>>゜)))>
-			<</p>
-	</div>
-	</div>
-	<div class="footer"> mitch'n'trev 2018</div>
+  <div class="little-fish">
+    <p>>゜)))>
+      <</p> </div> </div> <div class="footer"> mitch'n'trev 2018
+  </div>
 
-	<script>
+  <script>
 
-		const nob = document.querySelector('.nob');
-		const indexDescription = document.querySelector('.index-description');
+    const nob = document.querySelector('.nob');
+    const indexDescription = document.querySelector('.index-description');
 
-		fixHeightForIphoneScreen(document.querySelector('.nav--index'))
+    fixHeightForIphoneScreen(document.querySelector('.nav--index'))
 
-		nob.addEventListener('mouseover', () => {
-			indexDescription.classList.add('on')
-		})
+    nob.addEventListener('mouseover', () => {
+      indexDescription.classList.add('on')
+    })
 
-		nob.addEventListener('mouseleave', () => {
-			indexDescription.classList.remove('on')
-		})
+    nob.addEventListener('mouseleave', () => {
+      indexDescription.classList.remove('on')
+    })
 
 
-		// ugh iphones
-		function fixHeightForIphoneScreen(node) {
-			const ua = window.navigator.userAgent;
-			const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
-			const webkit = !!ua.match(/WebKit/i);
-			const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
-			if (iOSSafari) {
-				node.style.height = '85vh';
-			}
-		}
+    // ugh iphones
+    function fixHeightForIphoneScreen(node) {
+      const ua = window.navigator.userAgent;
+      const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+      const webkit = !!ua.match(/WebKit/i);
+      const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+      if (iOSSafari) {
+        node.style.height = '85vh';
+      }
+    }
 
-	</script>
+  </script>
 
 </body>
 
