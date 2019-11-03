@@ -59,7 +59,7 @@ body {
 	justify-content: space-between;
 }
 
-.little-fish {
+.little-untitled {
 	display: none;
 }
 
@@ -98,7 +98,7 @@ a:visited {
 }
 
 .index-background{
-    background:url(images/fish.jpg);
+    background:url(images/Untitled.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -208,7 +208,7 @@ ul.bandslist > li.poolparty > a:hover {
 	font-size: 14px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 532px) {
 	#mydiv {
 		top: 0;
 		left: 0;
@@ -228,11 +228,12 @@ ul.bandslist > li.poolparty > a:hover {
 		background: none;
 	}
 
-	.little-fish {
+	.little-untitled {
+    font: small/1.5 Arial;
 		display: block;
 		position: fixed;
-		top: 46%;
-		left: 46%;
+		top: calc(50% - 156px / 2);
+		left: calc(50% - 112px / 2);
 	}
 
 	/*** bandz ****/
