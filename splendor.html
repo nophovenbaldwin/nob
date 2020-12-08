@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="𝙩𝙝𝙚" content="noah ob AKA noah ophoven-baldwin">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>misc.</title>
+</head>
+
+<body>
+
+  <div class="nav bandz">
+    <a href="/">𝔖𝔓𝔏𝔈𝔑𝔇𝔒ℜ 𝔉𝔄𝔏𝔏𝔖 𝔒𝔑 𝔈𝔙𝔈ℜ𝔜𝔗ℌℑ𝔑𝔊 𝔄ℜ𝔒𝔘𝔑𝔇</a>
+  </div>
+
+
+  <a class="misc-link" href="https://publiceyesore.bandcamp.com/album/splendor-falls-on-everything-around">
+    <p>𝑅𝑒𝒶𝓁𝓉𝓇𝑒𝑒 ⓞ𝕟 𝔹𝔸ℕ𝔻ℂ𝔸𝕄ℙ</p>
+  </a>
+  <a class="misc-link" href="http://www.publiceyesore.com/ehcat.php?eh=114">
+    <p>𝑅𝑒𝒶𝓁𝓉𝓇𝑒𝑒 on ᴇʜ?</p>
+  </a>
+  <a class="misc-link" href="https://twitter.com/john_cagematch">
+      <p>🆁🅴🆅🅸🅴🆆 "ａ ｃａｐｔｉｖａｔｉｎｇ ｄｅｂｕｔ ｆｒｏｍ ａ ｖｅｒｙ ｓｐｅｃｉａｌ ｇｒｏｕｐ"</p>
+  </a>
+
+
+      <script>
+
+        const links = document.querySelectorAll('.misc-link');
+
+        links.forEach(link => {
+          link.style.position = 'fixed';
+          setSpeed(link);
+          setInitialPlacement(link);
+          setNodeDimensions(link);
+          setInitalDirection(link);
+          requestAnimationFrame(() => go(link));
+        })
+
+        window.addEventListener('resize', () => links.forEach(setInitialPlacement))
+
+        // ------
+        function go(node) {
+
+          requestAnimationFrame(() => {
+            const currentTop = Number(window.getComputedStyle(node)['margin-top'].split('px')[0]);
+            const currentLeft = Number(window.getComputedStyle(node)['margin-left'].split('px')[0]);
+
+            if (currentTop >= window.innerHeight - node.height * 2) {
+              node.topDirection = false;
+            }
+
+            if (currentTop <= 0) {
+              node.topDirection = true;
+            }
+
+            if (currentLeft >= window.innerWidth - node.width) {
+              node.leftDirection = false;
+            }
+
+            if (currentLeft <= 0) {
+              node.leftDirection = true;
+            }
+
+            const newTop = node.topDirection ? currentTop + node.ySpeed : currentTop - node.ySpeed;
+            const newLeft = node.leftDirection ? currentLeft + node.xSpeed : currentLeft - node.xSpeed;
+
+            node.style['margin-top'] = `${newTop}px`;
+            node.style['margin-left'] = `${newLeft}px`;
+
+            go(node);
+          })
+        }
+
+        function setInitialPlacement(node) {
+          node.style['margin-top'] = `${Math.round(Math.random() * window.innerHeight)}px`
+          node.style['margin-left'] = `${Math.round(Math.random() * window.innerWidth)}px`
+        }
+
+        function setInitalDirection(node) {
+          node.topDirection = true;
+          node.leftDirection = true;
+        }
+
+        function setSpeed(node) {
+          node.xSpeed = Math.random() * .8 + .2;
+          node.ySpeed = Math.random() * .8 + .2;
+        }
+
+        function setNodeDimensions(node) {
+          node.width = node.getBoundingClientRect().width
+          node.height = node.getBoundingClientRect().height
+        }
+
+
+      </script>
+
+
+</body>
+
+</html>
