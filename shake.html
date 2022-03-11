@@ -1,3 +1,56 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="𝙩𝙝𝙚" content="noah ob AKA noah ophoven-baldwin">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>misc.</title>
+</head>
+
+<body>
+  <div style="position: relative">
+    <p style="position: fixed; bottom: 0; width:100%; text-align: left">
+                
+  <a style="color:grey" href="http://www.zoominnight.bandcamp.com">𝘓𝘈𝘉𝘌𝘓 𝘓𝘐𝘕𝘒</a> <br>
+   </p>
+            </div>
+ 
+  <div class="nav bandz">
+    <a href="/">ᴿᵉᵃˡᵗʳᵉᵉ'ˢ ≋𝐒𝐡𝐚𝐤𝐞 𝐭𝐡𝐞 𝐇𝐨𝐮𝐫𝐠𝐥𝐚𝐬𝐬 𝐀𝐛𝐨𝐮𝐭≋</a>
+  </div>
+
+
+  <a class="misc-link" href="http://www.zoominnight.bandcamp.comv">
+    <p>ＲＥＡＬＴＲＥＥ ｏｎ 𝘡𝘰𝘰𝘮𝘪𝘯' 𝘕𝘪𝘨𝘩𝘵</p>
+  </a>
+
+
+      <script>
+
+        const links = document.querySelectorAll('.misc-link');
+
+        links.forEach(link => {
+          link.style.position = 'fixed';
+          setSpeed(link);
+          setInitialPlacement(link);
+          setNodeDimensions(link);
+          setInitalDirection(link);
+          requestAnimationFrame(() => go(link));
+        })
+
+        window.addEventListener('resize', () => links.forEach(setInitialPlacement))
+
+        // ------
+        function go(node) {
+
+          requestAnimationFrame(() => {
+            const currentTop = Number(window.getComputedStyle(node)['margin-top'].split('px')[0]);
+            const currentLeft = Number(window.getComputedStyle(node)['margin-left'].split('px')[0]);
+
+            if (currentTop >= window.innerHeight - node.height * 2) {
+              node.topDirection = false;
             }
 
             if (currentTop <= 0) {
