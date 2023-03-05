@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="𝙩𝙝𝙚 noah ob, bandz" content="noah ob AKA noah ophoven-baldwin, lovingly playing in bands for 𝙩𝙝𝙚𝙚">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>𝔅𝔄𝔑𝔇𝔖 + +</title>
+</head>
+
+<body>
+  <div class="nav bandz">
+    <a href="/">𝒯𝒪𝒩𝐸 𝒜𝑅𝒪𝒰𝒩𝒟 𝒴𝒪𝒰 𝒜𝒩𝒟 𝒲𝐼𝒯𝐻 𝒴𝒪𝒰</a <br>
+  </div>
+
+  <p class="little-squiggly-face">⍨</p>
+  <ul class="bandslist">
+    <li class="bandname">APRIL 3</li>
+    <ul>
+      <li>Erik Fratzke's Fake Accent</li>
+      <li>The Miami Dolphins & Paul Metzger</li>
+    </ul>
+    <li class="bandname">APRIL 10</li>
+    <ul>
+      <li class="description">
+       <li>Adam Linz</li>
+       <li>2Realtree</li>                      
+    </li>
+    </ul>
+    <li class="bandname">APRIL 17</li>
+    <ul>
+      <li class="description">
+       <li>Luke Martin & Adam Zahller</li>
+       <li>A birthday fundraiser for Davu Seru</li>
+    </ul>
+    <li class="bandname">APRIL 24</li>
+    <ul>
+      <li>Little Boat</li>
+      <li>alone-a & Mitch Stahlmann</li>
+    </ul>
+  </ul>
+</body>
+
+</html>
