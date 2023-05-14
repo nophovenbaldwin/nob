@@ -1,5 +1,6 @@
 body {
-  background-color: lightblue;
+  background-color: background-color: #A2C5FF;
+;
   font-family: "Georgia", serif;
 }
 /* unvisited link */
@@ -14,7 +15,8 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: lightblue;
+  color: background-color: #A2C5FF;
+;
 }
 
 /* selected link */
