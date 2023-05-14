@@ -1,0 +1,23 @@
+body {
+  background-color: lightblue;
+  font-family: "Georgia", serif;
+}
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: lightblue;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
